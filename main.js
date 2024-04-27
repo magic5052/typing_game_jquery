@@ -9,6 +9,7 @@ const typedfield = document.getElementById('typed');
 const wrap = document.getElementById('wrap');
 const start = document.getElementById('start');
 const count = document.getElementById('count');
+const num = document.getElementById('type-num');
 
 
 // 複数のテキストを格納する配列
@@ -37,6 +38,7 @@ const createText = () => {
     let random = Math.floor(Math.random() * textLists.length);
     untyped = textLists[random];
     untypedfield.textContent = untyped;
+    num.textContent = score;
 
 };
 
@@ -125,6 +127,9 @@ start.addEventListener('click', () => {
 
     // ボタンを非表示にする
     start.style.display = 'none';
+
+    // 現在タイプ数を表示にする
+    num.style.display = 'block';
 
     // キーボードのイベント処理
     document.addEventListener('keypress', keyPress);
