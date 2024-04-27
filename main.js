@@ -38,7 +38,6 @@ const createText = () => {
     let random = Math.floor(Math.random() * textLists.length);
     untyped = textLists[random];
     untypedfield.textContent = untyped;
-    num.textContent = score;
 
 };
 
@@ -61,6 +60,7 @@ const keyPress = e => {
     untyped = untyped.substring(1);
     typedfield.textContent = typed;
     untypedfield.textContent = untyped;
+    num.textContent = score;
 
     // テキストがなくなったら新しいテキストを表示
     if (untyped === '') {
